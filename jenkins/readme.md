@@ -114,7 +114,10 @@ When prompted, accept the host key and enter the password you set for root.
    docker exec -it jenkins ssh root@jenkins-agent
    ```
 
-## 6. Configure node in jenkins
+## 6. Creating a agent
+![alt text](image0.png)
+
+## 7. Creating a Job
 ![alt text](images/image.png)
 ![alt text](images/image2.png)
 ![alt text](images/image3.png)
