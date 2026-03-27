@@ -40,7 +40,7 @@ passwd
 apt-get install nano
 # Edit this config
 nano /etc/ssh/sshd_config
-rgb(134, 32, 175) Add below two line after nano
+# Add below two line after nano
 #PermitRootLogin yes
 #PasswordAuthentication yes
 # Exit the container
@@ -113,3 +113,8 @@ When prompted, accept the host key and enter the password you set for root.
    ```bash
    docker exec -it jenkins ssh root@jenkins-agent
    ```
+
+## 6. Configure node in jenkins
+![alt text](image.png)
+
+Click save and apply
