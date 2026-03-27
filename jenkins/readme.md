@@ -118,3 +118,8 @@ When prompted, accept the host key and enter the password you set for root.
 ![alt text](images/image.png)
 
 Click save and apply
+
+## 7. Creating a job
+![alt text](images/image2.png)
+
+![alt text](images/image3.png)
