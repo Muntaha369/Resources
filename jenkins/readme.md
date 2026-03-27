@@ -115,6 +115,6 @@ When prompted, accept the host key and enter the password you set for root.
    ```
 
 ## 6. Configure node in jenkins
-![alt text](image.png)
+![alt text](images/image.png)
 
 Click save and apply
