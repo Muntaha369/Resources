@@ -119,20 +119,25 @@ When prompted, accept the host key and enter the password you set for root.
    ```bash
    docker exec -it jenkins ssh root@jenkins-agent
    ```
+## 6. Get jenkins password
+```bash
+cat /var/jenkins_home/secrets/initialAdminPassword
+# copy and use it to login into the dashbord
+```
 
-## 6. Connecting to agent from Dashbord
+## 7. Connecting to agent from Dashbord
 ![alt text](images/image0.png)
 
-## 7. Connecting through ngrok
+## 8. Connecting through ngrok
 ```bash
 ngrok http 8080
 # webhook cant be used on local so use above command
 # ngrok will give you a public URL like: https://abc123.ngrok.io copy it
 ```
-## 8. Adding link to Github webhook
+## 9. Adding link to Github webhook
 ![alt text](images/image1.png)
 
-## 9. Creating a Job
+## 10. Creating a Job
 ![alt text](images/image.png)
 ![alt text](images/image2.png)
 ![alt text](images/image3.png)
