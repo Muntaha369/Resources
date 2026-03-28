@@ -30,6 +30,8 @@ Inside the jenkins-agent:
 ```bash
 #Install Java
 apt update && apt install -y openjdk-17-jre-headless
+# Install docker CLI
+apt-get update && apt-get install -y docker.io
 # Install SSH
 apt update && apt install -y openssh-server
 # Start the SSH service
@@ -67,7 +69,11 @@ Install the SSH client:
 
 ```bash
 docker exec -u root -it jenkins bash
+# Install docker CLI
+apt-get update && apt-get install -y docker.io
+# Install ssh
 apt update && apt install -y openssh-client
+# Start ssh
 service ssh start
 exit
 ```
