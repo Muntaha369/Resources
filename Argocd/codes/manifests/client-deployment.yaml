@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-client
+  namespace: todo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata:
+      labels:
+        app: client
+    spec:
+      containers:
+      - name: todo-client
+        image: muntaha69/todo-client
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: production

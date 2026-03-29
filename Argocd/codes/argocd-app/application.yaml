@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: todo
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: server=muntaha69/todo-server,client=muntaha69/todo-client
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/argocd-image-updater-git-creds
+    argocd-image-updater.argoproj.io/server.update-strategy: semver  # ✅ matches alias 'server'
+    argocd-image-updater.argoproj.io/client.update-strategy: semver  # ✅ matches alias 'client'
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Muntaha369/TODO-k8s.git
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: todo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
